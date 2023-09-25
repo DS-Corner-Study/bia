@@ -1,0 +1,81 @@
+//초기화 하지 않은 변수의 예
+let age; // 변수 선언
+age = 25; // 값 할당
+
+var age;
+age = 30;
+
+//상수 선언
+const age = 25; // 초기화(선언 + 할당)
+
+//자료형
+let name = "이정환";
+let location = "역곡";
+let introduce = `${name}은 ${location}에 살고 있습니다`;
+
+console.log(introduce); //출력 >> 이정환은 역곡에 살고 있습니다
+
+//형변환
+let strA = "10개";
+let numA = parseInt(strA,10);
+
+console.log(numA); // 10 반환
+
+let str = "파이팅 2023";
+let num = parseInt(str,10);
+
+console.log(num); // NaN 반환
+
+//null병합 연산자
+let varA = 10;
+let varB = 20;
+let varC;
+
+console.log(varA ?? varB); // 10출력. 확정된 값 사이에서는 왼쪽 값 출력
+console.log(varB ?? varc); // 20출력. 확정된 값인 varB 값 출력
+
+//switch문
+let fruit = "apple";
+switch (fruit) {
+    case "apple": {
+        console.log("사과");
+        break;                                //실행 종료
+    }
+    case "banana": {
+        console.log("바나나");
+        break;                                //실행 종료
+    }
+    default: {
+        console.log("우리가 찾는 과일 아님");  //찾는 case 없을 때
+    }
+}
+
+//함수
+function getArea(width, height) { //함수 선언 
+    let area = width * height;
+    return area; //함수 반환
+}
+
+let result = getArea(10, 20); //함수 호출
+console.log(result);
+
+let funcA = (매개변수) => 반환값;
+
+let funcA = function(매개변수) {
+    return 반환값;
+}
+
+
+//객체
+let person = {        // 객체 생성
+    name : "이정환"; 
+    age : 25;
+    "like cat" : true;  // key값이 복수 단어 -> "" 사용하기
+};
+
+const personName = person.name; // 점 표기법
+const personAge = person["age"]; // 괄호 표기법
+
+//배열
+let arrA = [];          // 리터럴
+let arrB = new Array(); // 생성자
