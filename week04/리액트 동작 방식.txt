@@ -1,0 +1,10 @@
+## 리액트의 동작 방식
+
+1. localhost:3000으로 접속 요청 → public 폴더의 index.html 반환
+2. index.html → src 폴더의 index.js와 bundle.js 불러옴
+<script> 태그에서 자동으로 추가함
+3. bundle.js가 실행되어 index.js에서 작성한 코드 실행됨
+4. index.js → 돔에서 리엑트 앱의 루트가 될 요소 지정
+              (ReactDOM.createRoot 메서드 이용) 
+5. 돔의 루트 아래에서 자식 컴포넌트 추가(render 메서드 이용)
+⇒ 결과적으로 App 컴포넌트가 렌더링됨
